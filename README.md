@@ -4,6 +4,8 @@ Calculadoras para progresar en el gimnasio: calorías, porcentaje de grasa corpo
 
 **Verla online:** [olympo.genesiscodestudio.com](https://olympo.genesiscodestudio.com)
 
+![Portada de OLYMPO](assets/img/capturas/portada.png)
+
 Fue **mi primera página web**. La empecé en 2024 mientras aprendía HTML, CSS y JavaScript, y en 2026 la retomé para terminarla. En el historial de commits se ve la versión original y todo lo que cambié después.
 
 ## Qué tiene
@@ -14,6 +16,12 @@ Fue **mi primera página web**. La empecé en 2024 mientras aprendía HTML, CSS 
 | **Grasa corporal** | Estima el porcentaje de grasa con el método de la Marina de EE. UU. (en centímetros) y muestra en qué rango estás. |
 | **1RM** | Estima la repetición máxima con 7 fórmulas (Epley, Brzycki, Lombardi, Mayhew, McGlothin, O'Conner y Wathan), las promedia y arma una tabla de cargas de 1 a 12 repeticiones. |
 | **Consejos** | Sobrecarga progresiva, técnica de los ejercicios básicos, alimentación, descanso y constancia. |
+
+![Calculadora de calorías con el resultado para cada etapa](assets/img/capturas/calorias.png)
+
+En el celular:
+
+![Inicio, grasa corporal y 1RM en el celular](assets/img/capturas/celulares.png)
 
 ## Qué cambió desde la versión original
 
@@ -54,7 +62,7 @@ y entrá a <http://localhost:8000>.
     │   ├── calorias.js
     │   ├── grasa-corporal.js
     │   └── 1rm.js
-    └── img/
+    └── img/              Logo, favicon y capturas del README
 ```
 
 ---

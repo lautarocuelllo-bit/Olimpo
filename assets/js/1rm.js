@@ -28,10 +28,15 @@ function calcular1RM() {
     .map((r) => `<tr><td>${r.nombre}</td><td class="num">${fmt(r.valor, 1)} kg</td></tr>`)
     .join("");
 
-  // Carga para cada cantidad de repeticiones (inversa de Brzycki)
+  // Carga para cada cantidad de repeticiones. Usa la curva de Brzycki, (37 − n) / 36,
+  // elevada a un exponente que la hace pasar por los dos puntos que conocemos:
+  // 1 repetición = el 1RM promedio, y tus repeticiones = el peso que levantaste.
+  const brzycki = (n) => (37 - n) / 36;
+  const exponente = reps === 1 ? 1 : Math.log(peso / promedio) / Math.log(brzycki(reps));
+
   const filasCargas = [];
   for (let n = 1; n <= 12; n++) {
-    const carga = (promedio * (37 - n)) / 36;
+    const carga = promedio * Math.pow(brzycki(n), exponente);
     const porcentaje = (carga / promedio) * 100;
     const clase = n === reps ? ' class="is-current"' : "";
     filasCargas.push(

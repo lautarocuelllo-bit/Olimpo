@@ -2,6 +2,8 @@
 
 Calculadoras para progresar en el gimnasio: calorías, porcentaje de grasa corporal y repetición máxima (1RM), más una guía con lo básico para arrancar.
 
+**Verla online:** [olympo.genesiscodestudio.com](https://olympo.genesiscodestudio.com)
+
 Fue **mi primera página web**. La empecé en 2024 mientras aprendía HTML, CSS y JavaScript, y en 2026 la retomé para terminarla. En el historial de commits se ve la versión original y todo lo que cambié después.
 
 ## Qué tiene

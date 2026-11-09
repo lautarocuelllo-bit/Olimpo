@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/olympo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/1rm.css">
+    <title>Calculadora de 1RM</title>
+</head>
+<body>
+  <div class="header-image"></div>
+    <h1>Calculadora de 1RM</h1>
+    
+    <div class="calculator-container">
+      <div class="explanation">
+        <h2>Sobre las fórmulas de 1RM</h2>
+        <p>El cálculo de la repetición máxima (1RM) es una estimación del peso máximo que puedes levantar en una repetición para un ejercicio. Se utilizan diferentes fórmulas para calcularlo, siendo las más comunes:</p>
+        <ul>
+            <li><strong>Epley:</strong> Usa repeticiones bajas a moderadas, ideal para ejercicios generales.</li>
+            <li><strong>Brzycki:</strong> Precisa para repeticiones entre 1 y 10, ampliamente utilizada.</li>
+            <li><strong>Lombardi:</strong> Diseñada para repeticiones altas (más de 10).</li>
+            <li><strong>Mayhew:</strong> Específica para el press de banca.</li>
+            <li><strong>McGlothin:</strong> Funciona bien para entrenamientos de fuerza generales.</li>
+            <li><strong>O'Conner:</strong> Simple y efectiva para principiantes.</li>
+            <li><strong>Wathan:</strong> Muy precisa para atletas avanzados.</li>
+        </ul>
+    </div>
+        <form id="rmForm">
+            <label for="weight">Peso levantado (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="reps">Número de repeticiones:</label>
+            <input type="number" id="reps" name="reps" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="../js/1rm.js"></script>
+<footer>
+    <p>&copy; 2024 DeathCode Studios. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

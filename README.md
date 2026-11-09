@@ -57,4 +57,4 @@ y entrá a <http://localhost:8000>.
 
 ---
 
-Hecho por Lautaro Cuello · DeathCode Studio
+Hecho por Lautaro Cuello · [Genesis CodeStudio](https://genesiscodestudio.com)

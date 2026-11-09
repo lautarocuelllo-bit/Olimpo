@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de calorías · OLYMPO</title>
+  <meta name="description" content="Calculá tus calorías de mantenimiento y cuánto comer para definir o hacer volumen, con la proteína diaria recomendada.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="OLYMPO, inicio">
+        <img src="assets/img/wordmark.jpg" alt="OLYMPO" width="721" height="165">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calorias.html" aria-current="page">Calorías</a></li>
+          <li><a href="grasa-corporal.html">Grasa corporal</a></li>
+          <li><a href="1rm.html">1RM</a></li>
+          <li><a href="consejos.html">Consejos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <div class="page-head">
+      <span class="eyebrow">Calculadora</span>
+      <h1>Calorías</h1>
+      <p>Las calorías son la energía que sacás de la comida. Cuántas necesitás depende de tu edad, peso, altura y de cuánto te movés.</p>
+    </div>
+
+    <div class="calc">
+      <form id="form-calorias" class="card" novalidate>
+        <div class="form-grid">
+          <fieldset class="field full">
+            <legend>Sexo</legend>
+            <div class="segmented">
+              <input type="radio" id="sexo-h" name="sexo" value="hombre" checked>
+              <label for="sexo-h">Hombre</label>
+              <input type="radio" id="sexo-m" name="sexo" value="mujer">
+              <label for="sexo-m">Mujer</label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" inputmode="numeric" min="15" max="90" placeholder="25" required>
+          </div>
+          <div class="field">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" inputmode="decimal" min="30" max="300" step="0.1" placeholder="75" required>
+          </div>
+          <div class="field full">
+            <label for="altura">Altura (cm)</label>
+            <input type="number" id="altura" inputmode="numeric" min="120" max="230" placeholder="175" required>
+          </div>
+
+          <div class="field full">
+            <label for="actividad">Nivel de actividad</label>
+            <select id="actividad">
+              <option value="1.2">Sedentario (poco o nada de ejercicio)</option>
+              <option value="1.375">Liviano (1 a 3 días por semana)</option>
+              <option value="1.55" selected>Moderado (3 a 5 días por semana)</option>
+              <option value="1.725">Alto (6 a 7 días por semana)</option>
+              <option value="1.9">Muy alto (trabajo físico + entrenamiento)</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="formula">Fórmula</label>
+            <select id="formula">
+              <option value="mifflin" selected>Mifflin-St Jeor (la más precisa hoy)</option>
+              <option value="harris">Harris-Benedict (la clásica)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Calcular</button>
+        </div>
+        <p class="form-error" id="error" role="alert"></p>
+      </form>
+
+      <section class="card" id="resultado" aria-live="polite" aria-label="Resultado">
+        <p class="result-empty">Completá tus datos y vas a ver acá tus calorías para cada etapa.</p>
+      </section>
+    </div>
+
+    <article class="prose">
+      <h2>Las tres etapas</h2>
+      <h3>Definición</h3>
+      <p>Comés menos de lo que gastás (entre 250 y 500 kcal menos) para perder grasa. Mantené la proteína alta, entre 1,8 y 2,4 g por kilo de peso, para no perder músculo.</p>
+      <h3>Recomposición</h3>
+      <p>Comés tus calorías de mantenimiento y priorizás la proteína. Si sos principiante podés ganar músculo y perder grasa al mismo tiempo.</p>
+      <h3>Volumen</h3>
+      <p>Comés entre 250 y 500 kcal por encima de tu mantenimiento para ganar masa muscular, con 1,6 a 2,2 g de proteína por kilo. Vas a ganar algo de grasa en el proceso: es normal.</p>
+
+      <h2>Cómo se calcula</h2>
+      <p>Primero se estima tu <strong>metabolismo basal</strong>, lo que gastás sin moverte. Después se multiplica por tu nivel de actividad para tener tu <strong>gasto diario total</strong>, que son tus calorías de mantenimiento.</p>
+      <ul>
+        <li><strong>Mifflin-St Jeor:</strong> <code>10 × peso + 6,25 × altura − 5 × edad + 5</code> en hombres y <code>− 161</code> en mujeres.</li>
+        <li><strong>Harris-Benedict:</strong> <code>66,5 + 13,75 × peso + 5,003 × altura − 6,75 × edad</code> en hombres y <code>655,1 + 9,563 × peso + 1,850 × altura − 4,676 × edad</code> en mujeres.</li>
+      </ul>
+      <div class="callout">
+        <p>Es una estimación. Usala como punto de partida, pesate una vez por semana y ajustá 100 a 200 kcal si en 2 o 3 semanas no ves el cambio que buscás.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="anio">2026</span> OLYMPO · Hecho por Lautaro Cuello · DeathCode Studio</p>
+      <p>Los cálculos se hacen en tu navegador. No se guarda ningún dato.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/calc.js"></script>
+  <script src="assets/js/calorias.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de 1RM · OLYMPO</title>
+  <meta name="description" content="Estimá tu repetición máxima (1RM) con 7 fórmulas y mirá qué peso usar según las repeticiones.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="OLYMPO, inicio">
+        <img src="assets/img/wordmark.jpg" alt="OLYMPO" width="721" height="165">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calorias.html">Calorías</a></li>
+          <li><a href="grasa-corporal.html">Grasa corporal</a></li>
+          <li><a href="1rm.html" aria-current="page">1RM</a></li>
+          <li><a href="consejos.html">Consejos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <div class="page-head">
+      <span class="eyebrow">Calculadora</span>
+      <h1>1RM</h1>
+      <p>Tu 1RM es el peso máximo que podés levantar en una sola repetición. No hace falta probarlo: se estima a partir de una serie que ya hiciste.</p>
+    </div>
+
+    <div class="calc">
+      <form id="form-1rm" class="card" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="peso">Peso levantado (kg)</label>
+            <input type="number" id="peso" inputmode="decimal" min="1" max="500" step="0.5" placeholder="80" required>
+          </div>
+          <div class="field">
+            <label for="reps">Repeticiones</label>
+            <input type="number" id="reps" inputmode="numeric" min="1" max="15" placeholder="6" required>
+            <span class="hint">Entre 1 y 15</span>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Calcular</button>
+        </div>
+        <p class="form-error" id="error" role="alert"></p>
+      </form>
+
+      <section class="card" id="resultado" aria-live="polite" aria-label="Resultado">
+        <p class="result-empty">Poné el peso y las repeticiones de una serie que hayas hecho hasta casi no poder más.</p>
+      </section>
+    </div>
+
+    <article class="prose">
+      <h2>Las 7 fórmulas</h2>
+      <p>Cada fórmula salió de estudios distintos, así que dan números un poco diferentes. Por eso la calculadora te muestra todas y usa el promedio.</p>
+      <ul>
+        <li><strong>Epley:</strong> para repeticiones bajas a moderadas, sirve para casi cualquier ejercicio.</li>
+        <li><strong>Brzycki:</strong> muy precisa entre 1 y 10 repeticiones. Es la más usada.</li>
+        <li><strong>Lombardi:</strong> se comporta mejor con series largas, de más de 10 repeticiones.</li>
+        <li><strong>Mayhew:</strong> se creó a partir del press de banca.</li>
+        <li><strong>McGlothin:</strong> buena para entrenamiento de fuerza en general.</li>
+        <li><strong>O'Conner:</strong> simple y conservadora, ideal si estás empezando.</li>
+        <li><strong>Wathan:</strong> muy precisa en atletas con experiencia.</li>
+      </ul>
+      <div class="callout">
+        <p>Cuantas menos repeticiones uses, más precisa es la estimación. Con más de 10 el error crece bastante.</p>
+      </div>
+
+      <h2>Cómo usar la tabla</h2>
+      <p>La tabla de cargas te dice qué peso usar para cada cantidad de repeticiones. Por ejemplo, si querés hacer series de 8, buscá la fila del 8 y empezá con ese peso o un poco menos.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="anio">2026</span> OLYMPO · Hecho por Lautaro Cuello · DeathCode Studio</p>
+      <p>Los cálculos se hacen en tu navegador. No se guarda ningún dato.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/calc.js"></script>
+  <script src="assets/js/1rm.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OLYMPO · Calculadoras para progresar en el gym</title>
+  <meta name="description" content="Calculá tus calorías, tu porcentaje de grasa corporal y tu 1RM. Herramientas gratis para progresar en el gimnasio.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="OLYMPO, inicio">
+        <img src="assets/img/wordmark.jpg" alt="OLYMPO" width="721" height="165">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="calorias.html">Calorías</a></li>
+          <li><a href="grasa-corporal.html">Grasa corporal</a></li>
+          <li><a href="1rm.html">1RM</a></li>
+          <li><a href="consejos.html">Consejos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container">
+        <img class="hero-logo" src="assets/img/logo.jpg" alt="" width="388" height="349">
+        <h1>Bienvenido al <span class="accent">OLYMPO</span></h1>
+        <p class="lead">
+          Todos alguna vez fuimos principiantes y sentimos que no progresábamos.
+          Acá tenés las herramientas básicas para entrenar con números: cuánto comer,
+          cómo viene tu composición corporal y cuánta fuerza tenés.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="calorias.html">Calcular mis calorías</a>
+          <a class="btn btn-ghost" href="consejos.html">Leer los consejos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-herramientas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Herramientas</span>
+          <h2 id="titulo-herramientas">Tres calculadoras, cero vueltas</h2>
+          <p class="muted">Todo se calcula en tu navegador. No hay registro y no se guarda ningún dato.</p>
+        </div>
+
+        <div class="cards">
+          <a class="card" href="calorias.html">
+            <span class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3 4 5 4 9a4 4 0 0 1-8 0c0-2 1-3 1-5 1 1 2 2 3 2 0-2-1-4 0-6z"/><path d="M6 15a6 6 0 0 0 12 0"/></svg>
+            </span>
+            <h3>Calorías</h3>
+            <p>Tu gasto diario y cuánto comer para definir, mantener o hacer volumen, con la proteína que necesitás en cada etapa.</p>
+            <span class="card-link">Calcular →</span>
+          </a>
+
+          <a class="card" href="grasa-corporal.html">
+            <span class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+            </span>
+            <h3>Grasa corporal</h3>
+            <p>Estimá tu porcentaje de grasa con una cinta métrica, usando el método de la Marina de EE. UU.</p>
+            <span class="card-link">Calcular →</span>
+          </a>
+
+          <a class="card" href="1rm.html">
+            <span class="card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg>
+            </span>
+            <h3>1RM</h3>
+            <p>Tu repetición máxima con 7 fórmulas distintas, y qué peso usar según cuántas repeticiones quieras hacer.</p>
+            <span class="card-link">Calcular →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-empezar">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Por dónde empezar</span>
+          <h2 id="titulo-empezar">Si recién arrancás</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Elegí tu objetivo</h3>
+            <p>Definir, mantener o ganar músculo. La calculadora de calorías te dice cuánto comer para cada uno.</p>
+          </li>
+          <li>
+            <h3>Medite</h3>
+            <p>La balanza no lo dice todo. Anotá tu porcentaje de grasa cada 4 semanas y mirá la tendencia.</p>
+          </li>
+          <li>
+            <h3>Progresá de a poco</h3>
+            <p>Con tu 1RM sabés qué peso usar en cada serie. Subí la carga cuando completes todas las repeticiones.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="anio">2026</span> OLYMPO · Hecho por Lautaro Cuello · DeathCode Studio</p>
+      <p>Mi primera web: empezada en 2024, terminada en 2026.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

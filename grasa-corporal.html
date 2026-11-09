@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de grasa corporal · OLYMPO</title>
+  <meta name="description" content="Estimá tu porcentaje de grasa corporal con una cinta métrica, con el método de la Marina de EE. UU.">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="OLYMPO, inicio">
+        <img src="assets/img/wordmark.jpg" alt="OLYMPO" width="721" height="165">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú</button>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="calorias.html">Calorías</a></li>
+          <li><a href="grasa-corporal.html" aria-current="page">Grasa corporal</a></li>
+          <li><a href="1rm.html">1RM</a></li>
+          <li><a href="consejos.html">Consejos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="container">
+    <div class="page-head">
+      <span class="eyebrow">Calculadora</span>
+      <h1>Grasa corporal</h1>
+      <p>Con una cinta métrica y el método de la Marina de EE. UU. podés estimar tu porcentaje de grasa sin balanzas especiales.</p>
+    </div>
+
+    <div class="calc">
+      <form id="form-grasa" class="card" novalidate>
+        <div class="form-grid">
+          <fieldset class="field full">
+            <legend>Sexo</legend>
+            <div class="segmented">
+              <input type="radio" id="sexo-h" name="sexo" value="hombre" checked>
+              <label for="sexo-h">Hombre</label>
+              <input type="radio" id="sexo-m" name="sexo" value="mujer">
+              <label for="sexo-m">Mujer</label>
+            </div>
+          </fieldset>
+
+          <div class="field full">
+            <label for="altura">Altura (cm)</label>
+            <input type="number" id="altura" inputmode="numeric" min="120" max="230" placeholder="175" required>
+          </div>
+          <div class="field">
+            <label for="cuello">Cuello (cm)</label>
+            <input type="number" id="cuello" inputmode="decimal" min="20" max="70" step="0.1" placeholder="38" required>
+            <span class="hint">Debajo de la nuez</span>
+          </div>
+          <div class="field">
+            <label for="cintura">Cintura (cm)</label>
+            <input type="number" id="cintura" inputmode="decimal" min="40" max="200" step="0.1" placeholder="84" required>
+            <span class="hint" id="hint-cintura">A la altura del ombligo</span>
+          </div>
+          <div class="field full" id="campo-cadera" hidden>
+            <label for="cadera">Cadera (cm)</label>
+            <input type="number" id="cadera" inputmode="decimal" min="50" max="200" step="0.1" placeholder="96">
+            <span class="hint">En la parte más ancha de los glúteos</span>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Calcular</button>
+        </div>
+        <p class="form-error" id="error" role="alert"></p>
+      </form>
+
+      <section class="card" id="resultado" aria-live="polite" aria-label="Resultado">
+        <p class="result-empty">Ingresá tus medidas y vas a ver acá tu porcentaje estimado y en qué rango estás.</p>
+      </section>
+    </div>
+
+    <article class="prose">
+      <h2>Cómo medirte bien</h2>
+      <ul>
+        <li>Medite a la mañana, en ayunas y antes de entrenar.</li>
+        <li>La cinta tiene que quedar apoyada sobre la piel, sin apretar.</li>
+        <li>No metas la panza: respirá normal y medí al final de una exhalación.</li>
+        <li>Tomá cada medida dos veces y usá el promedio.</li>
+      </ul>
+
+      <h2>La fórmula</h2>
+      <p>Es el método que usa la Marina de EE. UU. para sus evaluaciones, en la versión con medidas en centímetros:</p>
+      <ul>
+        <li><strong>Hombres:</strong> <code>495 / (1,0324 − 0,19077 × log(cintura − cuello) + 0,15456 × log(altura)) − 450</code></li>
+        <li><strong>Mujeres:</strong> <code>495 / (1,29579 − 0,35004 × log(cintura + cadera − cuello) + 0,22100 × log(altura)) − 450</code></li>
+      </ul>
+      <div class="callout">
+        <p>Tiene un margen de error de 3 a 4 puntos. Sirve más para ver si vas bajando o subiendo que para saber el número exacto.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="anio">2026</span> OLYMPO · Hecho por Lautaro Cuello · DeathCode Studio</p>
+      <p>Los cálculos se hacen en tu navegador. No se guarda ningún dato.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/calc.js"></script>
+  <script src="assets/js/grasa-corporal.js"></script>
+</body>
+</html>
